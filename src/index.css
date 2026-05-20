@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-raahi-purple-50: #faf5ff;
+  --color-raahi-purple-100: #f3e8ff;
+  --color-raahi-purple-200: #e9d5ff;
+  --color-raahi-purple-300: #d8b4fe;
+  --color-raahi-purple-400: #c084fc;
+  --color-raahi-purple-500: #a855f7;
+  --color-raahi-purple-600: #9333ea;
+  --color-raahi-purple-700: #7c3aed;
+  --color-raahi-purple-800: #6b21a8;
+  --color-raahi-purple-900: #581c87;
+
+  --color-raahi-pink-50: #fdf2f8;
+  --color-raahi-pink-100: #fce7f3;
+  --color-raahi-pink-200: #fbcfe8;
+  --color-raahi-pink-300: #f9a8d4;
+  --color-raahi-pink-400: #f472b6;
+  --color-raahi-pink-500: #ec4899;
+  --color-raahi-pink-600: #db2777;
+
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-slide-up: slide-up 0.5s ease-out forwards;
+  --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  --animate-spin-slow: spin 3s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Splash loader ring */
+.splash-ring {
+  background: conic-gradient(from 0deg, transparent, #a855f7, #ec4899, transparent);
+  animation: spin 1.2s linear infinite;
+}
+
+/* Map grid pattern */
+.map-grid {
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .map-grid {
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.12) 1px, transparent 1px);
+}
+
+/* SOS pulse */
+.sos-pulse {
+  animation: sos-pulse 1.5s ease-out infinite;
+}
+
+@keyframes sos-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(236, 72, 153, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0);
+  }
+}

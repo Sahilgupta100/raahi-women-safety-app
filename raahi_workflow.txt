@@ -1,0 +1,12 @@
+src/
+├── assets/              # logo-placeholder.svg
+├── components/
+│   ├── auth/            # ProtectedRoute
+│   ├── dashboard/       # Device, Recording, Map, Emergency Contacts
+│   ├── layout/          # Navbar, Sidebar, BottomNav, AppLayout
+│   └── ui/              # Button, Card, FormInput, Modal, Toast, Loader
+├── context/             # Auth, Theme (dark mode), Toast
+├── data/mockData.json
+├── hooks/               # useForm, useAsync
+├── pages/               # Splash, Login, Signup, ForgotPassword, Dashboard, Profile, Settings
+└── services/            # api, auth, device, contacts, location, recording (mock, API-ready)

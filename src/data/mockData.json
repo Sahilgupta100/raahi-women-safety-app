@@ -1,0 +1,55 @@
+{
+  "user": {
+    "id": "user_001",
+    "fullName": "Priya Sharma",
+    "email": "priya@example.com",
+    "phone": "+91 98765 43210",
+    "avatar": null,
+    "createdAt": "2025-01-15T10:00:00Z"
+  },
+  "device": {
+    "id": "device_raahi_01",
+    "name": "Raahi Safety Band",
+    "status": "disconnected",
+    "battery": 78,
+    "firmware": "2.1.0",
+    "lastConnected": "2025-05-18T14:30:00Z"
+  },
+  "location": {
+    "latitude": 28.6139,
+    "longitude": 77.209,
+    "address": "Connaught Place, New Delhi",
+    "updatedAt": "2025-05-20T09:15:00Z",
+    "accuracy": 12
+  },
+  "emergencyContacts": [
+    {
+      "id": "ec_001",
+      "name": "Mom",
+      "phone": "+91 91234 56789",
+      "relationship": "Family",
+      "isPrimary": true
+    },
+    {
+      "id": "ec_002",
+      "name": "Ananya",
+      "phone": "+91 99887 76655",
+      "relationship": "Friend",
+      "isPrimary": false
+    },
+    {
+      "id": "ec_003",
+      "name": "Local Police",
+      "phone": "100",
+      "relationship": "Emergency",
+      "isPrimary": false
+    }
+  ],
+  "settings": {
+    "darkMode": false,
+    "notifications": true,
+    "locationSharing": true,
+    "autoRecordOnSOS": true,
+    "language": "en"
+  }
+}
